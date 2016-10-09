@@ -1,0 +1,48 @@
+{
+  "name": "sortable-elements",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukasoppermann/sortable-elements.git"
+  },
+  "homepage": "https://github.com/lukasoppermann/sortable-elements",
+  "authors": [
+    "Lukas Oppermann <lukas@vea.re>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "description": "Sortable in dev",
+  "main": "dist/sortable-elements.js",
+  "keywords": [
+    "sortable",
+    "html5",
+    "drag and drop"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "/.*",
+    "src/",
+    "demo/index.src.html",
+    "package.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.3.15",
+    "basscss": "~6.0.2",
+    "jquery": "~2.1.3",
+    "requirejs": "~2.1.17"
+  },
+  "_release": "abcfb45634",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "abcfb45634c2acd1688be0e3d0e98a5ee1bc5f47"
+  },
+  "_source": "https://github.com/lukasoppermann/sortable-elements.git",
+  "_target": "*",
+  "_originalSource": "sortable-elements"
+}
