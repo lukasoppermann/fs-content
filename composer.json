@@ -4,6 +4,8 @@
     "authors": [
 
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php" : "^7.0",
         "formandsystem/api": "0.1.*"
