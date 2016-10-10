@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
 use Illuminate\Support\Collection as LaravelCollection;
 use Cache;
@@ -104,7 +104,7 @@ abstract class AbstractEntity extends LaravelCollection
     protected function getCacheOrRetrieve($cache_suffix, $entity_name)
     {
         // set real entity name
-        $entity_name = '\App\Entities\\'.$entity_name;
+        $entity_name = '\Formandsystem\Content\Entities\\'.$entity_name;
         // build cache name
         // TODO: Change the entire way of how cache names are constructed, so they can easily be constructed form outside the class
         $cache_name = $this->getCacheName($this->getClassName().$cache_suffix);
@@ -170,7 +170,7 @@ abstract class AbstractEntity extends LaravelCollection
         // loop through items
         foreach($items as $related){
             // get entity class
-            $entity = '\App\Entities\\'.substr(ucfirst($related['type']),0,-1);
+            $entity = '\Formandsystem\Content\Entities\\'.substr(ucfirst($related['type']),0,-1);
             // make new entity if class exists
             if(class_exists($entity)){
                 new $entity(new LaravelCollection($related));
@@ -280,7 +280,7 @@ abstract class AbstractEntity extends LaravelCollection
      *
      * @method attach
      *
-     * @param App\Entities\{Entity} $entity [description]
+     * @param Formandsystem\Content\Entities\{Entity} $entity [description]
      *
      * @return void
      */
@@ -307,7 +307,7 @@ abstract class AbstractEntity extends LaravelCollection
      *
      * @method detach
      *
-     * @param App\Entities\{Entity} $entity [description]
+     * @param Formandsystem\Content\Entities\{Entity} $entity [description]
      *
      * @return void
      */
@@ -329,7 +329,7 @@ abstract class AbstractEntity extends LaravelCollection
      *
      * @method detach
      *
-     * @param App\Entities\{Entity} $entity [description]
+     * @param Formandsystem\Content\Entities\{Entity} $entity [description]
      *
      * @return void
      */
@@ -406,7 +406,7 @@ abstract class AbstractEntity extends LaravelCollection
      *
      * @method addRelationship
      *
-     * @param  App\Entities\AbstractEntity  $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity  $entity [description]
      */
     abstract protected function addRelationship(AbstractEntity $entity);
     /**
@@ -414,7 +414,7 @@ abstract class AbstractEntity extends LaravelCollection
      *
      * @method removeRelationship
      *
-     * @param  App\Entities\AbstractEntity  $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity  $entity [description]
      */
     abstract protected function removeRelationship(AbstractEntity $entity);
     /**
@@ -434,7 +434,7 @@ abstract class AbstractEntity extends LaravelCollection
      *
      * @param  string          $id [description]
      *
-     * @return App\Entities\AbstractEntity
+     * @return Formandsystem\Content\Entities\AbstractEntity
      */
     abstract protected function setEntityToId($id);
     /**

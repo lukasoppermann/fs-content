@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Pages;
+namespace Formandsystem\Content\Controllers\Pages;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Carbon\Carbon;
 use Validator;
 use Input;
-use App\Http\Controllers\Controller;
-use App\Services\Api\CollectionService;
-use App\Services\Api\PageService;
-use App\Entities\Collection;
-use App\Entities\Page;
+use Formandsystem\Content\Controllers\Controller;
+use Formandsystem\Content\Services\Api\CollectionService;
+use Formandsystem\Content\Services\Api\PageService;
+use Formandsystem\Content\Entities\Collection;
+use Formandsystem\Content\Entities\Page;
 use Illuminate\Support\Collection as LaravelCollection;
 
 class Pages extends Controller
@@ -82,12 +82,12 @@ class Pages extends Controller
             $collection = config('app.user')->account()->navigation()->first();
         }else{
             $collection = $collection->get('collection');
-            $collection = new \App\Entities\Collection($collection);
+            $collection = new \Formandsystem\Content\Entities\Collection($collection);
         }
         // add position to page
         $page['position'] = $collection->pages()->count()+1;
         // create new page
-        $newPage = (new \App\Entities\Page($page->toArray()));
+        $newPage = (new \Formandsystem\Content\Entities\Page($page->toArray()));
         if($collection->pages()->count() === 0){
             $collection->update([
                 'type' => 'pages'
@@ -111,7 +111,7 @@ class Pages extends Controller
     {
         // TODO: deal with errors
         if($id !== NULL){
-            $deleted = (new \App\Entities\Page($id))->delete();
+            $deleted = (new \Formandsystem\Content\Entities\Page($id))->delete();
         }
         // return to pages
         return back();

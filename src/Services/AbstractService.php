@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services;
+namespace Formandsystem\Content\Services;
 use Formandsystem\Api\Api;
-use App\Services\CacheService;
+use Formandsystem\Content\Services\CacheService;
 use Illuminate\Http\Request;
 use Auth;
 use GuzzleHttp;

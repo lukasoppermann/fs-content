@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Api;
+namespace Formandsystem\Content\Services\Api;
 
 class MetadetailService extends AbstractApiService
 {
@@ -17,7 +17,7 @@ class MetadetailService extends AbstractApiService
      *
      * @var string
      */
-    protected $entity = '\App\Entities\Metadetail';
+    protected $entity = '\Formandsystem\Content\Entities\Metadetail';
     /**
      * the api endpoint to connect to
      *

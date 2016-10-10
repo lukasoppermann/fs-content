@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services;
+namespace Formandsystem\Content\Services;
 
-use App\Services\Api\FragmentService;
-use App\Services\Api\CollectionService;
-use App\Entities\User;
+use Formandsystem\Content\Services\Api\FragmentService;
+use Formandsystem\Content\Services\Api\CollectionService;
+use Formandsystem\Content\Entities\User;
 use Illuminate\Http\Request;
 
 class DialogService extends AbstractService
@@ -21,7 +21,7 @@ class DialogService extends AbstractService
 
     protected function dialogEditCollection(Request $request)
     {
-        $collection = new \App\Entities\Collection($request->get('id'));
+        $collection = new \Formandsystem\Content\Entities\Collection($request->get('id'));
         if($collection !== NULL){
             return view('notice.dialog.edit-collection', $collection->toArray())->render();
         }
@@ -36,7 +36,7 @@ class DialogService extends AbstractService
     protected function dialogFragmentSettings(Request $request)
     {
         return view('notice.dialog.fragment-settings', [
-            'item' => new \App\Entities\Fragment($request->get('id'))
+            'item' => new \Formandsystem\Content\Entities\Fragment($request->get('id'))
         ])->render();
     }
 }

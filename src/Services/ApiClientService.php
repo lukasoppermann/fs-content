@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Services;
+namespace Formandsystem\Content\Services;
 
 use Event;
 use App\Events\ClientWasDeleted;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Entities\Account;
-use App\Entities\AccountDetail;
+use Formandsystem\Content\Entities\Account;
+use Formandsystem\Content\Entities\AccountDetail;
 
 class ApiClientService extends AbstractService
 {

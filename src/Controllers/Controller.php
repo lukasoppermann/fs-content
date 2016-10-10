@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Formandsystem\Content\Controllers;
 
-use App\Services\Api\MetadetailService;
+use Formandsystem\Content\Services\Api\MetadetailService;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -10,11 +10,11 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Formandsystem\Api\Api;
-use App\Services\CacheService;
+use Formandsystem\Content\Services\CacheService;
 use Illuminate\Http\Request;
-use App\Entities\User;
+use Formandsystem\Content\Entities\User;
 use App\Http\Requests;
-use App\Services\NavigationService;
+use Formandsystem\Content\Services\NavigationService;
 use Validator;
 use Illuminate\Support\Collection as LaravelCollection;
 use GuzzleHttp;

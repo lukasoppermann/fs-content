@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Formandsystem\Content\Controllers;
 
 use Illuminate\Http\Request;
-use App\Entities\User;
-use App\Entities\AccountDetail;
+use Formandsystem\Content\Entities\User;
+use Formandsystem\Content\Entities\AccountDetail;
 use App\Http\Requests;
 
 class Users extends Controller

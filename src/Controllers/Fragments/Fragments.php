@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Fragments;
+namespace Formandsystem\Content\Controllers\Fragments;
 
-use App\Http\Controllers\Controller;
+use Formandsystem\Content\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Entities\Fragment;
-use App\Entities\Collection;
+use Formandsystem\Content\Entities\Fragment;
+use Formandsystem\Content\Entities\Collection;
 use Validator;
 
 class Fragments extends Controller
@@ -15,12 +15,12 @@ class Fragments extends Controller
     public function store(Request $request)
     {
         // get parent entity
-        $parentEntity = '\App\Entities\\'.ucfirst($request->get('parentType'));
+        $parentEntity = '\Formandsystem\Content\Entities\\'.ucfirst($request->get('parentType'));
         $parentEntity = new $parentEntity($request->get('parentId'));
         // get position
         $position = $parentEntity->fragments()->count() + 1;
         // create new entity
-        $fragment = new \App\Entities\Fragment([
+        $fragment = new \Formandsystem\Content\Entities\Fragment([
             'type' => $request->get('type'),
             'position'  => $position,
             'meta' => [
@@ -53,7 +53,7 @@ class Fragments extends Controller
         // TODO: deal with errors
         if($id !== NULL){
             // get fragment
-            $fragment = new \App\Entities\Fragment($id);
+            $fragment = new \Formandsystem\Content\Entities\Fragment($id);
             // delete image connections
             foreach($fragment->images() as $image){
                 $image->delete();
@@ -72,7 +72,7 @@ class Fragments extends Controller
     public function update(Request $request, $id)
     {
         // get fragment
-        $fragment = new \App\Entities\Fragment($id);
+        $fragment = new \Formandsystem\Content\Entities\Fragment($id);
         // update position ?
         if($request->json('position') !== NULL){
             return $fragment->update([

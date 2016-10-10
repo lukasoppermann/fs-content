@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractApiResourceEntity;
-// use  \App\Services\Api\MetadetailService as ResourceService;
+use Formandsystem\Content\Entities\AbstractApiResourceEntity;
+// use  \Formandsystem\Content\Services\Api\MetadetailService as ResourceService;
 
 class Metadetail extends AbstractApiResourceEntity
 {
     /**
      * the service class for this entity
      */
-    protected $resourceService = '\App\Services\Api\MetadetailService';
+    protected $resourceService = '\Formandsystem\Content\Services\Api\MetadetailService';
     /**
      * transform attributes
      *

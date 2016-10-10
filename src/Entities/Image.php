@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractApiResourceEntity;
+use Formandsystem\Content\Entities\AbstractApiResourceEntity;
 
 class Image extends AbstractApiResourceEntity
 {
     /**
      * the service class for this entity
      */
-    protected $resourceService = '\App\Services\Api\ImageService';
+    protected $resourceService = '\Formandsystem\Content\Services\Api\ImageService';
     /**
      * transform attributes
      *

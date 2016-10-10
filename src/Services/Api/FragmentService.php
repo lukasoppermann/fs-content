@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Api;
+namespace Formandsystem\Content\Services\Api;
 
 class FragmentService extends AbstractApiService
 {
@@ -22,7 +22,7 @@ class FragmentService extends AbstractApiService
      *
      * @var string
      */
-    protected $entity = '\App\Entities\Fragment';
+    protected $entity = '\Formandsystem\Content\Entities\Fragment';
     /**
      * the api endpoint to connect to
      *

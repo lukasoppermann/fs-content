@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractEntity;
+use Formandsystem\Content\Entities\AbstractEntity;
 use Illuminate\Support\Collection as LaravelCollection;
 use Cache;
 
@@ -87,7 +87,7 @@ abstract class AbstractApiResourceEntity extends AbstractEntity
         }
         // if collection has not been retrieved
         if($this->relationships[$relatedType] === NULL){
-            $service = '\App\Services\Api\\'.$this->getClassName().'Service';
+            $service = '\Formandsystem\Content\Services\Api\\'.$this->getClassName().'Service';
             $related = (new $service)->relationship($this->getId(), $relatedType);
             if(isset($related['data'])){
                 $this->relationships[$relatedType] = (new LaravelCollection($related['data']))->pluck('id');
@@ -98,7 +98,7 @@ abstract class AbstractApiResourceEntity extends AbstractEntity
         // build entities
         $data = (new LaravelCollection($this->relationships[$relatedType]))->map(function($id) use ($relatedType){
             // get entity class
-            $entity = '\App\Entities\\'.ucfirst(substr($relatedType,0 ,-1));
+            $entity = '\Formandsystem\Content\Entities\\'.ucfirst(substr($relatedType,0 ,-1));
             // return entity if valid
             try{
                 if(class_exists($entity)){
@@ -178,7 +178,7 @@ abstract class AbstractApiResourceEntity extends AbstractEntity
      *
      * @method addRelationship
      *
-     * @param  App\Entities\AbstractEntity  $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity  $entity [description]
      */
     protected function addRelationship(AbstractEntity $entity)
     {
@@ -197,7 +197,7 @@ abstract class AbstractApiResourceEntity extends AbstractEntity
      *
      * @method removeRelationship
      *
-     * @param  App\Entities\AbstractEntity  $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity  $entity [description]
      */
     protected function removeRelationship(AbstractEntity $entity)
     {
@@ -212,7 +212,7 @@ abstract class AbstractApiResourceEntity extends AbstractEntity
      *
      * @method removeRelationship
      *
-     * @param  App\Entities\AbstractEntity  $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity  $entity [description]
      */
     protected function removeAllRelationships($type){
         // dettach all
@@ -229,7 +229,7 @@ abstract class AbstractApiResourceEntity extends AbstractEntity
      *
      * @method resourceService
      *
-     * @return App\Services\Api\AbstractApiService
+     * @return Formandsystem\Content\Services\Api\AbstractApiService
      */
     protected function resourceService(){
         return new $this->resourceService;

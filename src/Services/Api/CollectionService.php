@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Api;
+namespace Formandsystem\Content\Services\Api;
 
 class CollectionService extends AbstractApiService
 {
@@ -22,7 +22,7 @@ class CollectionService extends AbstractApiService
      *
      * @var string
      */
-    protected $entity = '\App\Entities\Collection';
+    protected $entity = '\Formandsystem\Content\Entities\Collection';
     /**
      * the api endpoint to connect to
      *

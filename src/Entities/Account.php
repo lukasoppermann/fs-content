@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractModelEntity;
-use App\Entities\AccountDetail;
-use App\Services\Api\MetadetailService;
-use App\Services\Api\CollectionService;
+use Formandsystem\Content\Entities\AbstractModelEntity;
+use Formandsystem\Content\Entities\AccountDetail;
+use Formandsystem\Content\Services\Api\MetadetailService;
+use Formandsystem\Content\Services\Api\CollectionService;
 use Illuminate\Support\Collection as LaravelCollection;
 use Cache;
 
@@ -85,7 +85,7 @@ class Account extends AbstractModelEntity
         }
         // get entities
         if( $ids = Cache::get($cache_name) ){
-            $entities = $this->getEntities($ids->toArray(), 'App\Entities\Collection');
+            $entities = $this->getEntities($ids->toArray(), 'Formandsystem\Content\Entities\Collection');
             // update cache if needed
             if(count($ids) !== count($entities)){
                 Cache::put($cache_name, $entities->pluck('id'), 1440);
@@ -128,7 +128,7 @@ class Account extends AbstractModelEntity
      */
     public function retrieveOnlyCollections()
     {
-        $collections = collect((new \App\Services\Api\CollectionService)->find('type',['posts','collections','pages'], [
+        $collections = collect((new \Formandsystem\Content\Services\Api\CollectionService)->find('type',['posts','collections','pages'], [
             'exclude' => 'pages,fragments'
         ]));
 
@@ -148,7 +148,7 @@ class Account extends AbstractModelEntity
      */
     public function retrieveCollection()
     {
-        $collections = collect((new \App\Services\Api\CollectionService)->find('type',['posts','collections','pages'], [
+        $collections = collect((new \Formandsystem\Content\Services\Api\CollectionService)->find('type',['posts','collections','pages'], [
             'only' => false,
             'exclude' => 'pages.fragments, pages.pages'
         ]));

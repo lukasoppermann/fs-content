@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractApiResourceEntity;
+use Formandsystem\Content\Entities\AbstractApiResourceEntity;
 use Illuminate\Support\Collection as LaravelCollection;
 
 class Fragment extends AbstractApiResourceEntity
@@ -22,7 +22,7 @@ class Fragment extends AbstractApiResourceEntity
     /**
      * the service class for this entity
      */
-    protected $resourceService = '\App\Services\Api\FragmentService';
+    protected $resourceService = '\Formandsystem\Content\Services\Api\FragmentService';
     /**
      * retrieve data and build collection
      *
@@ -104,7 +104,7 @@ class Fragment extends AbstractApiResourceEntity
      *
      * @method newCustomFragment
      *
-     * @param  App\Entities\AbstractEntity      $parent [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity      $parent [description]
      * @param  string                           $type [description]
      *
      * @return model
@@ -116,7 +116,7 @@ class Fragment extends AbstractApiResourceEntity
             foreach($this->items['data']['elements'] as $position => $element){
                 if(isset($element['name'])){
                     // create fragment
-                    $subfragment = new \App\Entities\Fragment([
+                    $subfragment = new \Formandsystem\Content\Entities\Fragment([
                         'type'      => $element['type'],
                         'name'      => $element['name'],
                         'position'  => $position,

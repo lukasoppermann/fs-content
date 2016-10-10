@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Formandsystem\Content\Controllers;
 use Illuminate\Routing\Controller as BaseController;
 use Formandsystem\Api\Api;
-use App\Services\CacheService;
+use Formandsystem\Content\Services\CacheService;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Entities\User;
+use Formandsystem\Content\Entities\User;
 
-use App\Services\Api\CollectionService;
-use App\Services\Api\FragmentService;
-use App\Services\Api\PageService;
+use Formandsystem\Content\Services\Api\CollectionService;
+use Formandsystem\Content\Services\Api\FragmentService;
+use Formandsystem\Content\Services\Api\PageService;
 
 class Test
 extends BaseController

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
 use App\Models\User as UserModel;
-use App\Entities\Account;
-use App\Entities\AbstractModelEntity;
+use Formandsystem\Content\Entities\Account;
+use Formandsystem\Content\Entities\AbstractModelEntity;
 use Cache;
 use Illuminate\Support\Collection as LaravelCollection;
 
@@ -65,7 +65,7 @@ class User extends AbstractModelEntity
      *
      * @method account
      *
-     * @return App\Entities\Account
+     * @return Formandsystem\Content\Entities\Account
      */
     public function account()
     {

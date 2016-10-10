@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractApiResourceEntity;
+use Formandsystem\Content\Entities\AbstractApiResourceEntity;
 use Illuminate\Support\Collection as LaravelCollection;
 use Cache;
 
@@ -11,7 +11,7 @@ class Page extends AbstractApiResourceEntity
     /**
      * the service class for this entity
      */
-    protected $resourceService = '\App\Services\Api\PageService';
+    protected $resourceService = '\Formandsystem\Content\Services\Api\PageService';
     /**
      * transform attributes
      *
@@ -41,7 +41,7 @@ class Page extends AbstractApiResourceEntity
      *
      * @method parentCollection
      *
-     * @return App\Entities\Collection
+     * @return Formandsystem\Content\Entities\Collection
      */
     public function parentCollection()
     {

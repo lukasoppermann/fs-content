@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Collections;
+namespace Formandsystem\Content\Controllers\Collections;
 
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Formandsystem\Content\Controllers\Controller;
 
 
 class Collections extends Controller
@@ -139,7 +139,7 @@ class Collections extends Controller
         }
 
         // if validation succeeds
-        $collection = new \App\Entities\Collection([
+        $collection = new \Formandsystem\Content\Entities\Collection([
             'name' => $item->get('name'),
             'slug' => strtolower($item->get('slug')),
             'type' => ($item->get('type') === 'pages' ? 'pages' : 'posts'), // TODO: needs to be refactored to acced input from form
@@ -149,7 +149,7 @@ class Collections extends Controller
         config('app.user')->account()->attachCache($collection,'AccountCollection');
         // if page collection, create new page
         if($item->get('type') === 'pages'){
-            $collection->attach(new \App\Entities\Page([
+            $collection->attach(new \Formandsystem\Content\Entities\Page([
                 'menu_label'    => 'New Page',
                 'slug'          => $item->get('slug').'-new-page',
                 'language'      => 'de',
@@ -157,7 +157,7 @@ class Collections extends Controller
             ]));
         }
         else{
-            $collection->attach(new \App\Entities\Fragment([
+            $collection->attach(new \Formandsystem\Content\Entities\Fragment([
                 'type'    => $item->get('type'),
             ]));
         }
@@ -171,7 +171,7 @@ class Collections extends Controller
      */
     public function delete(Request $request, $id)
     {
-        $collection = new \App\Entities\Collection($id);
+        $collection = new \Formandsystem\Content\Entities\Collection($id);
         // TODO: deal with errors
         if($collection->pages()->isEmpty() && $collection->fragments()->isEmpty()){
             $response = $collection->delete();
@@ -214,7 +214,7 @@ class Collections extends Controller
             ->withInput();
         }
         // if validation succeeds
-        $collection = (new \App\Entities\Collection($id))->update([
+        $collection = (new \Formandsystem\Content\Entities\Collection($id))->update([
             'name' => $item->get('name'),
             'slug' => $item->get('slug'),
         ]);

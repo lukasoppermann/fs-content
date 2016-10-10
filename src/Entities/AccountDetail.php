@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractModelEntity;
+use Formandsystem\Content\Entities\AbstractModelEntity;
 use Cache;
 
 class AccountDetail extends AbstractModelEntity

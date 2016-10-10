@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\Api;
+namespace Formandsystem\Content\Services\Api;
 
-use App\Services\AbstractService;
+use Formandsystem\Content\Services\AbstractService;
 use Illuminate\Support\Collection as LaravelCollection;
 
 abstract class AbstractApiService extends AbstractService
@@ -69,7 +69,7 @@ abstract class AbstractApiService extends AbstractService
      * @param  string|array $values
      * @param  array $param
      *
-     * @return \App\Entities\*
+     * @return \Formandsystem\Content\Entities\*
      */
     public function first($filter = NULL, $values = NULL, Array $param = [])
     {

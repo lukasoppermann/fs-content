@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
-use App\Entities\Image;
-use App\Entities\Fragment;
+namespace Formandsystem\Content\Controllers;
+use Formandsystem\Content\Entities\Image;
+use Formandsystem\Content\Entities\Fragment;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Config;

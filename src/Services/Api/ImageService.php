@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services\Api;
+namespace Formandsystem\Content\Services\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Account;
-use App\Entities\Collection;
+use Formandsystem\Content\Entities\Collection;
 
 class ImageService extends AbstractApiService
 {
@@ -22,7 +22,7 @@ class ImageService extends AbstractApiService
      *
      * @var string
      */
-    protected $entity = '\App\Entities\Image';
+    protected $entity = '\Formandsystem\Content\Entities\Image';
     /**
      * the api endpoint to connect to
      *

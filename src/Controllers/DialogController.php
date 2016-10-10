@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Formandsystem\Content\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Services\DialogService;
+use Formandsystem\Content\Services\DialogService;
 use App\Http\Requests;
 
 class DialogController extends Controller

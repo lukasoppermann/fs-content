@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace Formandsystem\Content\Services;
 use Formandsystem\Api\Cache\CacheInterface;
 
 class CacheService implements CacheInterface

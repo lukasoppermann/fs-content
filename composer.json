@@ -5,7 +5,8 @@
 
     ],
     "require": {
-        "php" : "^7.0"
+        "php" : "^7.0",
+        "formandsystem/api": "0.1.*"
     },
     "require-dev": {
 

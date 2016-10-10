@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services;
+namespace Formandsystem\Content\Services;
 
-use App\Entities\Account;
-use App\Entities\AccountDetail;
+use Formandsystem\Content\Entities\Account;
+use Formandsystem\Content\Entities\AccountDetail;
 
 class ApiClientDetailService extends AbstractService
 {

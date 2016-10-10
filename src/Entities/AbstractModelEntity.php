@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities;
+namespace Formandsystem\Content\Entities;
 
-use App\Entities\AbstractEntity;
+use Formandsystem\Content\Entities\AbstractEntity;
 use Illuminate\Support\Collection as LaravelCollection;
 use Cache;
 
@@ -21,7 +21,7 @@ abstract class AbstractModelEntity extends AbstractEntity
      *
      * @param  string          $id [description]
      *
-     * @return App\Entities\AbstractEntity
+     * @return Formandsystem\Content\Entities\AbstractEntity
      */
     public function getEntityFromId($id)
     {
@@ -131,7 +131,7 @@ abstract class AbstractModelEntity extends AbstractEntity
      *
      * @method addRelationship
      *
-     * @param  App\Entities\AbstractEntity  $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity  $entity [description]
      */
     protected function addRelationship(AbstractEntity $entity)
     {
@@ -147,7 +147,7 @@ abstract class AbstractModelEntity extends AbstractEntity
      *
      * @method removeRelationship
      *
-     * @param  App\Entities\AbstractEntity  $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity  $entity [description]
      */
     protected function removeRelationship(AbstractEntity $entity)
     {
@@ -163,7 +163,7 @@ abstract class AbstractModelEntity extends AbstractEntity
      *
      * @method getModelName
      *
-     * @param  App\Entities\AbstractEntity $entity [description]
+     * @param  Formandsystem\Content\Entities\AbstractEntity $entity [description]
      *
      * @return string
      */

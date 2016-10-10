@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace Formandsystem\Content\Services;
 
 class AccountService extends AbstractService
 {
