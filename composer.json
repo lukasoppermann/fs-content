@@ -3,18 +3,11 @@
     "description": "Old content stuff, needs to be removed over time",
     "authors": [
 
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/formandsystem/api.git"
-        }
-    ],
+    ]
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php" : "^7.0",
-        "formandsystem/api": "0.1.*"
+        "php" : "^7.0"
     },
     "require-dev": {
 
