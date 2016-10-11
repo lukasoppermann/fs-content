@@ -3,7 +3,7 @@
     "description": "Old content stuff, needs to be removed over time",
     "authors": [
 
-    ]
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
