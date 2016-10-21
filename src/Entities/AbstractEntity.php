@@ -207,7 +207,7 @@ abstract class AbstractEntity extends LaravelCollection
             return trim($this->getClassName().'.'.$this->getId().'.'.$suffix,'.');
         }
         else {
-            throw \Exception('Cannot get ID via getId() from entity '.get_class($this));
+            throw new \Exception('Cannot get ID via getId() from entity '.get_class($this));
         }
     }
     /**
