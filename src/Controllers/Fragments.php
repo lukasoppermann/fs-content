@@ -1,6 +1,6 @@
 <?php
 
-namespace Formandsystem\Content\Controllers\Fragments;
+namespace Formandsystem\Content\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

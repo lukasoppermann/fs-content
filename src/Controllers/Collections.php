@@ -1,6 +1,6 @@
 <?php
 
-namespace Formandsystem\Content\Controllers\Collections;
+namespace Formandsystem\Content\Controllers;
 
 
 use App\Http\Requests;
