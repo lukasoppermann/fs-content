@@ -8,7 +8,6 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Formandsystem\Api\Api;
 use Formandsystem\Content\Services\CacheService;
 use Illuminate\Http\Request;
@@ -21,7 +20,7 @@ use GuzzleHttp;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     protected $config;
     protected $account;

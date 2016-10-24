@@ -1,6 +1,7 @@
 <?php
 
 namespace Formandsystem\Content\Controllers;
+use App\Http\Controllers\Controller;
 use Formandsystem\Content\Entities\Image;
 use Formandsystem\Content\Entities\Fragment;
 use App\Http\Requests;

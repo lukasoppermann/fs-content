@@ -2,6 +2,7 @@
 
 namespace Formandsystem\Content\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Formandsystem\Content\Services\DialogService;
 use App\Http\Requests;

@@ -2,7 +2,7 @@
 
 namespace Formandsystem\Content\Controllers\Fragments;
 
-use Formandsystem\Content\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Formandsystem\Content\Entities\Fragment;

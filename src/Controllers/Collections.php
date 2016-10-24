@@ -5,7 +5,7 @@ namespace Formandsystem\Content\Controllers\Collections;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Formandsystem\Content\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 
 class Collections extends Controller

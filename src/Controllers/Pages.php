@@ -7,7 +7,7 @@ use App\Http\Requests;
 use Carbon\Carbon;
 use Validator;
 use Input;
-use Formandsystem\Content\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Formandsystem\Content\Services\Api\CollectionService;
 use Formandsystem\Content\Services\Api\PageService;
 use Formandsystem\Content\Entities\Collection;
@@ -39,7 +39,7 @@ class Pages extends Controller
             return redirect('/pages');
         }
 
-        $collections = $page->collections('type','posts')
+        $collections = $page->collections('type','posts');
         $collection = $page->parentCollection();
 
         \Debugbar::stopMeasure('PagesController');
