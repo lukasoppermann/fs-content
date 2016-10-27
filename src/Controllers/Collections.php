@@ -18,7 +18,7 @@ class Collections extends Controller
      * @return View
      */
     public function index(){
-        return view('collections.dashboard');
+        return view('formandsystem-content::collections.dashboard');
     }
     /**
      * show collection
@@ -74,7 +74,7 @@ class Collections extends Controller
             // show item if exists
             if($item !== NULL){
                 \Debugbar::stopMeasure('CollectionsController', 'Page exists');
-                return view('pages.page', [
+                return view('formandsystem-content::pages.page', [
                     'item' => $item,
                     'collection' => $collection,
                 ]);
@@ -89,13 +89,13 @@ class Collections extends Controller
                 $fragment_blueprint = config('app.account')->details()->where('type', 'fragment')->where('name',$collection->fragments()->first()->get('type'))->first();
 
                 if(!$fragment_blueprint->isEmpty()){
-                    $elements[] = view('fragments.add-custom-fragment', [
+                    $elements[] = view('formandsystem-content::fragments.add-custom-fragment', [
                         'collection' => $collection,
                         'type'       => $fragment_blueprint->get('name'),
                     ])->render();
                 }
 
-                return view('collections.fragments', [
+                return view('formandsystem-content::collections.fragments', [
                     'items'         => $collection->fragments()->sortBy('position'),
                     'collection'    => $collection,
                     'collections'   => config('app.user')->account()->collections('type','posts'),
@@ -244,7 +244,7 @@ class Collections extends Controller
             }
         }
         // if collection is empty
-        return view('collections.empty', [
+        return view('formandsystem-content::collections.empty', [
             'collection' => $collection
         ]);
     }
