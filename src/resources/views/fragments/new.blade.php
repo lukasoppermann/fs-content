@@ -3,7 +3,7 @@
     <div class="o-dialog__box c-fragment-settings-dialog">
         <div class="o-dialog__body o-grid">
 
-            @include('fragments.new-fragment', [
+            @include('formandsystem-content::fragments.new-fragment', [
                 'classes' => 'o-grid__column o-grid__column--md-4of12',
                 'label' => 'Text',
                 'related' => 'fragment',
@@ -12,7 +12,7 @@
                 'button_classes' => 'c-fragment-new__selection',
             ])
 
-            @include('fragments.new-fragment', [
+            @include('formandsystem-content::fragments.new-fragment', [
                 'classes' => 'o-grid__column o-grid__column--md-4of12',
                 'label' => 'Input',
                 'related' => 'fragment',
@@ -21,7 +21,7 @@
                 'button_classes' => 'c-fragment-new__selection',
             ])
 
-            @include('fragments.new-fragment', [
+            @include('formandsystem-content::fragments.new-fragment', [
                 'classes' => 'o-grid__column o-grid__column--md-4of12',
                 'label' => 'Image',
                 'related' => 'fragment',
@@ -30,7 +30,7 @@
                 'button_classes' => 'c-fragment-new__selection',
             ])
 
-            @include('fragments.new-fragment', [
+            @include('formandsystem-content::fragments.new-fragment', [
                 'classes' => 'o-grid__column o-grid__column--md-4of12',
                 'label' => 'Collection',
                 'related' => 'fragment',
@@ -39,7 +39,7 @@
                 'button_classes' => 'c-fragment-new__selection',
             ])
 
-            @include('fragments.new-fragment', [
+            @include('formandsystem-content::fragments.new-fragment', [
                 'classes' => 'o-grid__column o-grid__column--md-4of12',
                 'label' => 'Section',
                 'related' => 'fragment',
@@ -52,7 +52,7 @@
                 @if(isset($custom['data']['meta']) && isset($custom['data']['meta']['available_in'])
                     && isset($custom['data']['meta']['available_in']['pages'])
                     && $custom['data']['meta']['available_in']['pages'] == 'true')
-                    @include('fragments.new-fragment', [
+                    @include('formandsystem-content::fragments.new-fragment', [
                         'classes'           => 'o-grid__column o-grid__column--md-4of12',
                         'label'             => $custom['data']['meta']['label'],
                         'type'              => $custom['name'],

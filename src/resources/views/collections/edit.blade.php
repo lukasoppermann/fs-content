@@ -3,12 +3,12 @@
     {{ csrf_field() }}
     {{ method_field('PATCH') }}
 
-    @include('forms.input',['name' =>'name', 'label' => 'Collection Name', 'value' => $name])
+    @include('formandsystem-content::forms.input',['name' =>'name', 'label' => 'Collection Name', 'value' => $name])
 
-    @include('forms.input',['name' =>'slug', 'label' => 'Path/Slug', 'value' => $slug])
+    @include('formandsystem-content::forms.input',['name' =>'slug', 'label' => 'Path/Slug', 'value' => $slug])
 
     <div class="o-grid">
         <a class="o-grid__column o-button o-button--link o-button--link--red o-flex__item--auto" href="/collections/delete/{{$id}}">Delete</a>
-        @include('forms.submit',['label' => 'Save', 'classes' => 'o-button o-button--blue  o-grid__column o-flex__item--align-right o-flex__item--auto'])
+        @include('formandsystem-content::forms.submit',['label' => 'Save', 'classes' => 'o-button o-button--blue  o-grid__column o-flex__item--align-right o-flex__item--auto'])
     </div>
 </form>

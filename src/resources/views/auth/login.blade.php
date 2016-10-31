@@ -11,12 +11,12 @@
 
             <form role="form" method="POST" action="{{ url('/login') }}">
                 {{ csrf_field() }}
-                @include('forms.input',['name' => 'email', 'label' => 'E-Mail Address'])
-                @include('forms.input',['type' => 'password','name' => 'password', 'label' => 'Password'])
-                @include('forms.toggle',['name' => 'remember', 'label' => 'Remember Me', 'checked' => true])
+                @include('formandsystem-content::forms.input',['name' => 'email', 'label' => 'E-Mail Address'])
+                @include('formandsystem-content::forms.input',['type' => 'password','name' => 'password', 'label' => 'Password'])
+                @include('formandsystem-content::forms.toggle',['name' => 'remember', 'label' => 'Remember Me', 'checked' => true])
 
                 <div class="o-flex">
-                    @include('forms.submit',['label' => 'Login', 'classes' => 'o-button o-button--blue o-button--space-top o-flex__item--fill'])
+                    @include('formandsystem-content::forms.submit',['label' => 'Login', 'classes' => 'o-button o-button--blue o-button--space-top o-flex__item--fill'])
                 </div>
             </form>
         </div>

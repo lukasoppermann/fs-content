@@ -15,7 +15,7 @@
 <form action="/fragments/{{$item->get('id')}}" method="POST">
     {{ csrf_field() }}
     {{ method_field('PATCH') }}
-    @include('forms.select', [
+    @include('formandsystem-content::forms.select', [
         'name' => 'collection',
         'label' => 'Select a collection',
         'values' => array_merge([false => 'select'],$cols->toArray()),

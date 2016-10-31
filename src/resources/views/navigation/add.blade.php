@@ -7,7 +7,7 @@
 
         @if(isset($fields))
             @foreach($fields as $name => $value)
-                @include('forms.hidden', ['name' => $name, 'value' => $value])
+                @include('formandsystem-content::forms.hidden', ['name' => $name, 'value' => $value])
             @endforeach
         @endif
 

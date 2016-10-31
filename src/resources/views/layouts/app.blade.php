@@ -9,7 +9,7 @@
         <meta name="site_url" content="{{ url('/') }}">
         <link href="{{ asset(env('FILE_PREFIX').elixir('css/app.css'), Request::secure()) }}" rel="stylesheet" type="text/css">
 
-        @include('custom-css')
+        @include('formandsystem-content::custom-css')
         <link href='//fonts.googleapis.com/css?family=Merriweather:300,700%7CLato:400,700&subset=latin,latin' rel='stylesheet' type='text/css'>
 
         @if (env('APP_ENV') !== 'local')
@@ -31,8 +31,8 @@
         {!!$app['Nav']->render()!!}
 
         <main class="c-main-content">
-            @include('notice.dialog')
-            @include('notice.status')
+            @include('formandsystem-content::notice.dialog')
+            @include('formandsystem-content::notice.status')
             @yield('content')
         </main>
     </body>

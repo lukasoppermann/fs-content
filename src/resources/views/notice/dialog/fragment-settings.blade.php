@@ -19,7 +19,7 @@
     {{ method_field('PATCH') }}
     <div class="o-flex-bar">
         <div class="o-flex-bar__item c-settings-grid-dropdown-box">
-            @include('forms.select',[
+            @include('formandsystem-content::forms.select',[
                 'name' => 'columns[md]',
                 'label' => 'Columns',
                 'values' => $grid_md_columns,
@@ -28,7 +28,7 @@
             ])
         </div>
         <div class="o-flex-bar__item c-settings-grid-dropdown-box">
-            @include('forms.select',[
+            @include('formandsystem-content::forms.select',[
                 'name' => 'columns[sm]',
                 'label' => 'Columns for small screens',
                 'values' => $grid_sm_columns,
@@ -37,7 +37,7 @@
             ])
         </div>
         <div class="o-flex-bar__item c-settings-grid-dropdown-box">
-            @include('forms.select',[
+            @include('formandsystem-content::forms.select',[
                 'name' => 'columns[lg]',
                 'label' => 'Columns for large screens',
                 'values' => $grid_lg_columns,
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    @include('forms.textarea',[
+    @include('formandsystem-content::forms.textarea',[
         'name' =>'custom_classes',
         'label' => 'Classes separated by whitespace (e.g. class second-class)',
         'value' => collect($item->get('meta'))->get('custom_classes',''),
@@ -55,7 +55,7 @@
     ])
 
     @if($item->get('type') === 'section')
-        @include('forms.input',[
+        @include('formandsystem-content::forms.input',[
             'name' =>'anchor',
             'label' => 'Achnor label',
             'value' => collect($item->get('meta'))->get('anchor',''),
@@ -64,7 +64,7 @@
     @endif
 
     <div class="o-flex-bar o-flex-bar--right">
-        @include('forms.submit',[
+        @include('formandsystem-content::forms.submit',[
             'label' => 'Save',
             'classes' => 'o-button o-button--blue o-flex-bar__item'
         ])
@@ -73,7 +73,7 @@
 <form class="o-flex-bar o-flex-bar--left" action="/fragments/{{$item->get('id')}}" method="POST" autocomplete="off">
     {{ csrf_field() }}
     {{ method_field('DELETE') }}
-    @include('forms.submit',[
+    @include('formandsystem-content::forms.submit',[
         'label' => 'Delete',
         'classes' => 'o-button o-button--link o-button--link--red o-flex-bar__item'
     ])

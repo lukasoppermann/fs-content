@@ -7,13 +7,13 @@
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
 
-                @include('forms.input',['name' =>'name', 'label' => 'Collection Name', 'value' => $collection->name])
+                @include('formandsystem-content::forms.input',['name' =>'name', 'label' => 'Collection Name', 'value' => $collection->name])
 
-                @include('forms.input',['name' =>'slug', 'label' => 'Path/Slug', 'value' => $collection->slug])
+                @include('formandsystem-content::forms.input',['name' =>'slug', 'label' => 'Path/Slug', 'value' => $collection->slug])
 
                 <div class="o-grid">
                     <a class="o-grid__column o-button o-button--link o-button--link--red o-flex__item--auto" href="/collections/delete/{{$collection->id}}">Delete</a>
-                    @include('forms.submit',['label' => 'Save', 'classes' => 'o-button o-button--blue  o-grid__column o-flex__item--align-right o-flex__item--auto'])
+                    @include('formandsystem-content::forms.submit',['label' => 'Save', 'classes' => 'o-button o-button--blue  o-grid__column o-flex__item--align-right o-flex__item--auto'])
                 </div>
 
             </form>

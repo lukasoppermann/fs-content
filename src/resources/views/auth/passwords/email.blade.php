@@ -17,10 +17,10 @@
             <form role="form" method="POST" action="{{ url('/password/email') }}">
                 {{ csrf_field() }}
 
-                @include('forms.input',['name' => 'email', 'label' => 'E-Mail Address'])
+                @include('formandsystem-content::forms.input',['name' => 'email', 'label' => 'E-Mail Address'])
 
                 <div class="o-flex">
-                    @include('forms.submit',['label' => 'Send password link', 'classes' => 'o-button o-button--blue o-button--space-top o-flex__item--fill'])
+                    @include('formandsystem-content::forms.submit',['label' => 'Send password link', 'classes' => 'o-button o-button--blue o-button--space-top o-flex__item--fill'])
                 </div>
             </form>
 

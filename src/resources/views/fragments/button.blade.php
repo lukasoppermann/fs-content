@@ -14,6 +14,6 @@
     </div>
 
     <div class="o-flex-bar" data-target="save-button-{{$fragment->id}}">
-        @include('forms.submit',['label' => 'Save', 'classes' => 'o-button o-button--blue o-flex-bar__item--right'])
+        @include('formandsystem-content::forms.submit',['label' => 'Save', 'classes' => 'o-button o-button--blue o-flex-bar__item--right'])
     </div>
 </form>

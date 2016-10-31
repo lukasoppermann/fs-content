@@ -6,12 +6,12 @@
 
     @if($item->fragments() !== NULL)
         @foreach($item->fragments()->sortBy('position') as $subfragment)
-            @include('fragments.fragment', [
+            @include('formandsystem-content::fragments.fragment', [
                 'item' => $subfragment,
                 'sortable_class' => 'js-sortable-fragment-item',
             ])
         @endforeach
     @endif
 
-    @include('fragments.new', ['fragment_id' => $item->get('id')])
+    @include('formandsystem-content::fragments.new', ['fragment_id' => $item->get('id')])
 </div>

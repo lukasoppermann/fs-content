@@ -4,7 +4,7 @@
             <div data-dialog-content>
                 {{$content or ''}}
             </div>
-            @include('notice.loading')
+            @include('formandsystem-content::notice.loading')
         </div>
     </div>
     <div class="o-dialog__bg" data-close-dialog></div>

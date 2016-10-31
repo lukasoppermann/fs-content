@@ -1,7 +1,7 @@
 <nav class="c-navigation">
     @if( config('app.user')->account()->isSetup() )
         @if(is_array($navigation['header']))
-            @include('navigation.navigation-header', $navigation['header'])
+            @include('formandsystem-content::navigation.navigation-header', $navigation['header'])
         @else
             {!!$navigation['header']!!}
         @endif
@@ -12,9 +12,9 @@
             </div>
         @endif
 
-        @include('navigation.navigation-footer')
+        @include('formandsystem-content::navigation.navigation-footer')
     @else
-        @include('navigation.navigation-header', [
+        @include('formandsystem-content::navigation.navigation-header', [
             'title' => 'Form&System',
         ])
     @endif

@@ -1,7 +1,7 @@
 <li class="c-navigation__item{{ $item['link'] === $active_item ? ' is-active' : '' }}">
     @if(isset($item['deletable']) && isset($item['id']))
         <form action="{{$action or ''}}" method="post">
-            @include('forms.hidden', ['name' => 'id', 'value' => $item['id']])
+            @include('formandsystem-content::forms.hidden', ['name' => 'id', 'value' => $item['id']])
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
             <button type="submit" class="c-navigation__delete">

@@ -33,11 +33,11 @@ if( isset($meta['columns']) ){
         @endif
 
         @if (in_array($item->get('type'), ['image','section','text','collection','input']))
-            @include('fragments.'.$item->get('type'), [
+            @include('formandsystem-content::fragments.'.$item->get('type'), [
                 'fragment' => $item
             ])
         @else
-            @include('fragments.custom', ['fragment' => $item])
+            @include('formandsystem-content::fragments.custom', ['fragment' => $item])
         @endif
     </div>
 </div>

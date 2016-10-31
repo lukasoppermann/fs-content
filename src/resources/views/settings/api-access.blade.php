@@ -7,7 +7,7 @@
     @endif
 
     @if(isset($notice))
-        @include('notice.notice', $notice)
+        @include('formandsystem-content::notice.notice', $notice)
     @endif
 
     <form class="o-form" action="/settings/developers/api-access" method="POST">
@@ -16,10 +16,10 @@
             @if(isset($client_id))
                 {{ method_field('DELETE') }}
                 <p class="o-flex-bar__item o-flex-bar__item--fill"><span class="type--bold">Client ID: </span><span class="type--grey">{{substr($client_id,0,20)}}…</span></p>
-                @include('forms.submit',['label' => 'Delete client credentials', 'classes' => 'o-button o-flex-bar__item o-flex-bar__item--right o-button--red'])
+                @include('formandsystem-content::forms.submit',['label' => 'Delete client credentials', 'classes' => 'o-button o-flex-bar__item o-flex-bar__item--right o-button--red'])
             @else
                 <p class="o-flex__item o-flex__item--fill">No client credentials create.</p>
-                @include('forms.submit',['label' => 'Create client credentials', 'classes' => 'o-button o-button--blue o-flex-bar__item o-flex-bar__item--right'])
+                @include('formandsystem-content::forms.submit',['label' => 'Create client credentials', 'classes' => 'o-button o-button--blue o-flex-bar__item o-flex-bar__item--right'])
             @endif
         </div>
     </form>

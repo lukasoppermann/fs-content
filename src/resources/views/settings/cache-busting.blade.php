@@ -10,7 +10,7 @@
         <div class="o-flex-bar">
             {{ method_field('POST') }}
             <p class="o-flex-bar__item o-flex-bar__item--fill"><span class="type--bold">Code: </span><span class="type--grey">{{config('app.user')->account()->details('name','code',true)->get('data','none')}}</span></p>
-            @include('forms.submit',['label' => 'Generate Code', 'classes' => 'o-button o-flex-bar__item o-flex-bar__item--right o-button--blue'])
+            @include('formandsystem-content::forms.submit',['label' => 'Generate Code', 'classes' => 'o-button o-flex-bar__item o-flex-bar__item--right o-button--blue'])
         </div>
     </form>
 </section>
