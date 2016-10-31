@@ -86,14 +86,14 @@ class Collections extends Controller
             // show item if exists
             if(!$collection->fragments()->isEmpty()){
 
-                // $fragment_blueprint = config('app.account')->details()->where('type', 'fragment')->where('name',$collection->fragments()->first()->get('type'))->first();
-                //
-                // if(!$fragment_blueprint->isEmpty()){
-                //     $elements[] = view('formandsystem-content::fragments.add-custom-fragment', [
-                //         'collection' => $collection,
-                //         'type'       => $fragment_blueprint->get('name'),
-                //     ])->render();
-                // }
+                $fragment_blueprint = config('app.account')->details()->where('type', 'fragment')->where('name',$collection->fragments()->first()->get('type'))->first();
+
+                if(!$fragment_blueprint->isEmpty()){
+                    $elements[] = view('formandsystem-content::fragments.add-custom-fragment', [
+                        'collection' => $collection,
+                        'type'       => $fragment_blueprint->get('name'),
+                    ])->render();
+                }
 
                 return view('formandsystem-content::collections.fragments', [
                     'items'         => $collection->fragments()->sortBy('position'),
