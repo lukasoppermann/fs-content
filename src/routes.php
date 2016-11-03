@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => ['web'], 'namespace' => 'Formandsystem\Content\Controllers'], function(){
+Route::group(['middleware' => ['web','auth'], 'namespace' => 'Formandsystem\Content\Controllers'], function(){
 
     // Route::get('/collections', 'Collections@index');
     Route::post('/collections', 'Collections@store');
